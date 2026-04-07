@@ -41,7 +41,7 @@
 
 ### 从 VSIX 文件安装
 
-1. 获取 `.vsix` 文件（参见项目中的 `docs/build.md` 了解如何从源码构建）
+1. 获取 `.vsix` 文件（在[release页](https://github.com/cuijunjie18/ShowImagePixels/releases/tag/release)下载，或参见项目中的 `docs/build.md` 了解如何从源码构建）
 2. 打开 VS Code
 3. 按 `Ctrl+Shift+P`（macOS: `Cmd+Shift+P`）打开命令面板
 4. 输入 `Extensions: Install from VSIX...`
