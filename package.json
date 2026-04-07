@@ -1,0 +1,54 @@
+{
+  "name": "showimagepixels",
+  "displayName": "ShowImagePixels",
+  "publisher": "local-dev",
+  "description": "展示项目区图片的像素大小.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.110.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "showimagepixels.showPixels",
+        "title": "ShowPixels"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "showimagepixels.showPixels",
+          "when": "resourceExtname =~ /\\.(png|jpg|jpeg|gif|bmp|webp|ico|tiff|tif|svg|avif)$/i",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "package": "npm run compile && vsce package --no-dependencies",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.110.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.3",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1"
+  },
+  "dependencies": {
+    "pnpm": "^10.33.0"
+  }
+}
