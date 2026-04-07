@@ -49,4 +49,8 @@
 
 ## License
 
-MIT
+## 展示
+
+![安装后](assets/a.png)  
+![使用1](assets/b.png)  
+![使用2](assets/c.png)  
